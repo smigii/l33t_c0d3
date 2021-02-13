@@ -3,4 +3,4 @@ project(l33t)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(l33t main.cpp SwapSecondLinkedList.hpp)
+add_executable(l33t main.cpp)

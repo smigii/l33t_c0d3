@@ -43,9 +43,8 @@ ListNode* makeList(int n){
 void shredList(ListNode* node){
     if(node->next){
         shredList(node->next);
-    } else {
-        free(node);
     }
+    delete(node);
 }
 
 class Solution {
@@ -58,7 +57,6 @@ public:
             head->next = swapPairs(head->next->next);
             temp->next = head;
             return temp;
-
         }
     }
 };
