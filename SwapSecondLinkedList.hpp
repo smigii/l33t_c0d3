@@ -40,6 +40,14 @@ ListNode* makeList(int n){
     return makeList(1, n);
 }
 
+void shredList(ListNode* node){
+    if(node->next){
+        shredList(node->next);
+    } else {
+        free(node);
+    }
+}
+
 class Solution {
 public:
     ListNode* swapPairs(ListNode* head) {
@@ -67,6 +75,8 @@ void SwapSecondLinkedList(){
     first = s.swapPairs(first);
 
     printList(first);
+
+    shredList(first);
 
     std::cout << "=== END SSLL\n";
 }
